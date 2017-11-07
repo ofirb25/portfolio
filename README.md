@@ -1,2 +1,2 @@
 Watch it here: 
-https://github.com/ofirb25/portfolio
+https://ofirb25.github.io/portfolio/
