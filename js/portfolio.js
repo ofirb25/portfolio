@@ -139,7 +139,5 @@ function changeModal(e) {
     if (e.key === 'ArrowLeft') renderPrevItem();
     else if (e.key === 'ArrowRight') renderNextItem();
     else return
-   
-
 }
 
