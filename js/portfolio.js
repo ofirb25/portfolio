@@ -5,8 +5,8 @@ var projs = [
         title: 'push it to the end',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/soko.png',
-        imgLargePath : 'img/portfolio/soko.png',
+        imgThumbPath: 'img/portfolio/soko.png',
+        imgLargePath: 'img/portfolio/soko.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -15,8 +15,8 @@ var projs = [
         title: 'Memories from the past',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/mines.png',
-        imgLargePath : 'img/portfolio/mines.png',
+        imgThumbPath: 'img/portfolio/mines.png',
+        imgLargePath: 'img/portfolio/mines.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -25,8 +25,8 @@ var projs = [
         title: 'Can you beat my record?',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/touchNums.png',
-        imgLargePath : 'img/portfolio/touchNums.png',
+        imgThumbPath: 'img/portfolio/touchNums.png',
+        imgLargePath: 'img/portfolio/touchNums.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -35,8 +35,8 @@ var projs = [
         title: 'push it to the end',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/inPicture.png',
-        imgLargePath : 'img/portfolio/inPicture.png',
+        imgThumbPath: 'img/portfolio/inPicture.png',
+        imgLargePath: 'img/portfolio/inPicture.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -45,8 +45,8 @@ var projs = [
         title: 'push it to the end',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/soko.png',
-        imgLargePath : 'img/portfolio/soko.png',
+        imgThumbPath: 'img/portfolio/soko.png',
+        imgLargePath: 'img/portfolio/soko.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -55,84 +55,85 @@ var projs = [
         title: 'Memories from the past',
         desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
         publishedAt: Date.now(),
-        imgThumbPath : 'img/portfolio/mines.png',
-        imgLargePath : 'img/portfolio/mines.png',
+        imgThumbPath: 'img/portfolio/mines.png',
+        imgLargePath: 'img/portfolio/mines.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     }
 ]
+var gAnimationInterval = setInterval(replayAnimation, 4000)
 
-var elPortContainer = document.querySelector('.portfolio-grid');
-var strHTML = ''
-for (var i = 0; i < projs.length; i++) {
-    var proj = projs[i];
-    strHTML += 
-    '<div class="col-md-4 col-sm-6 portfolio-item">' +
-    '<a class="portfolio-link" data-toggle="modal"' +
-    ' href="#portfolioModal" onclick="getModalData('+ proj.id +')">' +
-      '<div class="portfolio-hover">' +
-        '<div class="portfolio-hover-content">' +
-          '<i class="fa fa-plus fa-3x"></i>' +
-        '</div> ' +
-      '</div>' +
-      '<img class="img-fluid" src='+ proj.imgThumbPath +' alt="">' +
-    '</a>' +
-    '<div class="portfolio-caption">' +
-      '<h4>'+ proj.name +'</h4>' +
-      '<p class="text-muted">'+ proj.title +'</p>' +
-    '</div>' +
-  '</div>' 
+function replayAnimation() {
+    document.querySelector('.offcanvas-btn').classList.toggle('animate');
 }
-elPortContainer.innerHTML = strHTML;
-
+function onInit() {
+    var elPortContainer = document.querySelector('.portfolio-grid');
+    var strHTML = ''
+    for (var i = 0; i < projs.length; i++) {
+        var proj = projs[i];
+        strHTML +=
+            '<div class="col-md-4 col-sm-6 portfolio-item">' +
+            '<a class="portfolio-link" data-toggle="modal"' +
+            ' href="#portfolioModal" onclick="getModalData(' + proj.id + ')">' +
+            '<div class="portfolio-hover">' +
+            '<div class="portfolio-hover-content">' +
+            '<i class="fa fa-plus fa-3x"></i>' +
+            '</div> ' +
+            '</div>' +
+            '<img class="img-fluid" src=' + proj.imgThumbPath + ' alt="">' +
+            '</a>' +
+            '<div class="portfolio-caption">' +
+            '<h4>' + proj.name + '</h4>' +
+            '<p class="text-muted">' + proj.title + '</p>' +
+            '</div>' +
+            '</div>'
+    }
+    elPortContainer.innerHTML = strHTML;
+}
 
 function getModalData(projId) {
     console.log(projs[projId])
     document.querySelector('.modal-proj-name').innerText = projs[projId].name;
     document.querySelector('.modal-proj-title').innerText = projs[projId].title;
     document.querySelector('.modal-proj-description').innerText = projs[projId].desc;
-    document.querySelector('.modal-proj-img').setAttribute('src',projs[projId].imgLargePath);
+    document.querySelector('.modal-proj-img').setAttribute('src', projs[projId].imgLargePath);
     var elProjLabels = document.querySelector('.modal-proj-labels');
     var projLabels = projs[projId].labels;
     var labelStrHTML = '';
-    for(var i = 0; i < projLabels.length; i++) {
-        labelStrHTML += '<li><span class="badge badge-warning">'+ projLabels[i] +'</span></li>'
+    for (var i = 0; i < projLabels.length; i++) {
+        labelStrHTML += '<li><span class="badge badge-warning">' + projLabels[i] + '</span></li>'
     }
     elProjLabels.innerHTML = labelStrHTML;
-    document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId',projs[projId].id);
+    document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId', projs[projId].id);
     //next/ previous button in modal
-    if(projs[projId+1]) {
-        document.querySelector('.next-item').style.visibility = 'visible';        
+    if (projs[projId + 1]) {
+        document.querySelector('.next-item').style.visibility = 'visible';
     } else {
-        document.querySelector('.next-item').style.visibility = 'hidden';        
+        document.querySelector('.next-item').style.visibility = 'hidden';
     }
-    if(projs[projId-1]) {
-        document.querySelector('.prev-item').style.visibility = 'visible';        
+    if (projs[projId - 1]) {
+        document.querySelector('.prev-item').style.visibility = 'visible';
     } else {
-        document.querySelector('.prev-item').classList.visibility = 'hidden';        
+        console.log('in else')
+        document.querySelector('.prev-item').style.visibility = 'hidden';
     }
 
 }
 
-function renderNextItem(){
+function renderNextItem() {
     var curItem = +document.querySelector('#itemIdPlaceholder').getAttribute('data-itemId');
-    getModalData(curItem+1);
+    getModalData(curItem + 1);
 }
-function renderPrevItem(){
+function renderPrevItem() {
     var curItem = +document.querySelector('#itemIdPlaceholder').getAttribute('data-itemId');
-    getModalData(curItem-1);
+    getModalData(curItem - 1);
 }
 
 function submitContact() {
     var formSender = document.querySelector('#InputEmail').value;
     var formSubject = document.querySelector('#InputSubject').value;
     var formBody = document.querySelector('#InputMassageBody').value;
-    formBody+= '%0a %0a sent from: ' + formSender + ' at: ' + Date.now();
-    var gmailStr = ' https://mail.google.com/mail/?view=cm&fs=1&to=ofzir11@gmail.com&su='+ formSubject +'&body='+ formBody
-    window.open(gmailStr,'_blank');
+    formBody += '%0a %0a sent from: ' + formSender + ' at: ' + Date.now();
+    var gmailStr = ' https://mail.google.com/mail/?view=cm&fs=1&to=ofzir11@gmail.com&su=' + formSubject + '&body=' + formBody
+    window.open(gmailStr, '_blank');
 }
 
-var gAnimationInterval = setInterval(addClass,4000)
-
-function addClass() {
-    document.querySelector('.offcanvas-btn').classList.toggle('animate');
-}
