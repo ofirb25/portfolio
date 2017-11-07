@@ -3,7 +3,7 @@ var projs = [
         id: '0',
         name: 'Sokoban Game',
         title: 'push it to the end',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem vitae arcu egestas feugiat. Phasellus tincidunt sem convallis nisi ullamcorper maximus. Morbi dignissim mauris enim, porta lobortis elit aliquet et. Pellentesque tempus a ante at rhoncus. Mauris quis commodo nulla, ac congue lacus. Morbi accumsan nulla nunc, eget dignissim arcu mollis id. Quisque porta rutrum nulla, ut eleifend nunc consectetur eu. Phasellus dapibus elit et turpis rhoncus, nec imperdiet massa porta.',
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/soko.png',
         imgLargePath: 'img/portfolio/soko.png',
@@ -13,7 +13,7 @@ var projs = [
         id: '1',
         name: 'Mine Sweeper',
         title: 'Memories from the past',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        desc: 'Nulla facilisi. Duis malesuada lectus vitae urna commodo, vel iaculis turpis sodales. Nam porttitor ornare hendrerit. Aliquam facilisis augue dolor, a posuere dui mollis a. Fusce rutrum, libero vel efficitur accumsan, leo dui viverra est, a pellentesque quam elit et metus. Maecenas tincidunt accumsan lacinia. Nullam sed pretium nulla. Praesent quis faucibus metus. Donec augue arcu, varius pellentesque lectus vel, aliquet vulputate lorem. Mauris dictum scelerisque lacus sed ultrices.',
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/mines.png',
         imgLargePath: 'img/portfolio/mines.png',
@@ -23,7 +23,7 @@ var projs = [
         id: '2',
         name: 'Touch Nums',
         title: 'Can you beat my record?',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem vitae arcu egestas feugiat. Phasellus tincidunt sem convallis nisi ullamcorper maximus. Morbi dignissim mauris enim, porta lobortis elit aliquet et. Pellentesque tempus a ante at rhoncus. Mauris quis commodo nulla, ac congue lacus. Morbi accumsan nulla nunc, eget dignissim arcu mollis id. Quisque porta rutrum nulla, ut eleifend nunc consectetur eu. Phasellus dapibus elit et turpis rhoncus, nec imperdiet massa porta.',
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/touchNums.png',
         imgLargePath: 'img/portfolio/touchNums.png',
@@ -33,7 +33,7 @@ var projs = [
         id: '3',
         name: 'What\'s in the picture',
         title: 'push it to the end',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        desc: 'Nulla facilisi. Duis malesuada lectus vitae urna commodo, vel iaculis turpis sodales. Nam porttitor ornare hendrerit. Aliquam facilisis augue dolor, a posuere dui mollis a. Fusce rutrum, libero vel efficitur accumsan, leo dui viverra est, a pellentesque quam elit et metus. Maecenas tincidunt accumsan lacinia. Nullam sed pretium nulla. Praesent quis faucibus metus. Donec augue arcu, varius pellentesque lectus vel, aliquet vulputate lorem. Mauris dictum scelerisque lacus sed ultrices.',
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/inPicture.png',
         imgLargePath: 'img/portfolio/inPicture.png',
@@ -41,19 +41,19 @@ var projs = [
     },
     {
         id: '4',
-        name: 'Sokoban Game',
-        title: 'push it to the end',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        name: 'Calculator',
+        title: 'How much is too much?',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem vitae arcu egestas feugiat. Phasellus tincidunt sem convallis nisi ullamcorper maximus. Morbi dignissim mauris enim, porta lobortis elit aliquet et. Pellentesque tempus a ante at rhoncus. Mauris quis commodo nulla, ac congue lacus. Morbi accumsan nulla nunc, eget dignissim arcu mollis id. Quisque porta rutrum nulla, ut eleifend nunc consectetur eu. Phasellus dapibus elit et turpis rhoncus, nec imperdiet massa porta',
         publishedAt: Date.now(),
-        imgThumbPath: 'img/portfolio/soko.png',
-        imgLargePath: 'img/portfolio/soko.png',
+        imgThumbPath: 'img/portfolio/calc.png',
+        imgLargePath: 'img/portfolio/calc.png',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
         id: '5',
         name: 'Mine Sweeper',
         title: 'Memories from the past',
-        desc: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        desc: 'Nulla facilisi. Duis malesuada lectus vitae urna commodo, vel iaculis turpis sodales. Nam porttitor ornare hendrerit. Aliquam facilisis augue dolor, a posuere dui mollis a. Fusce rutrum, libero vel efficitur accumsan, leo dui viverra est, a pellentesque quam elit et metus. Maecenas tincidunt accumsan lacinia. Nullam sed pretium nulla. Praesent quis faucibus metus. Donec augue arcu, varius pellentesque lectus vel, aliquet vulputate lorem. Mauris dictum scelerisque lacus sed ultrices.',
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/mines.png',
         imgLargePath: 'img/portfolio/mines.png',
@@ -91,7 +91,7 @@ function onInit() {
 }
 
 function getModalData(projId) {
-    console.log(projs[projId])
+    if(!projs[projId]) return false;
     document.querySelector('.modal-proj-name').innerText = projs[projId].name;
     document.querySelector('.modal-proj-title').innerText = projs[projId].title;
     document.querySelector('.modal-proj-description').innerText = projs[projId].desc;
@@ -113,10 +113,8 @@ function getModalData(projId) {
     if (projs[projId - 1]) {
         document.querySelector('.prev-item').style.visibility = 'visible';
     } else {
-        console.log('in else')
         document.querySelector('.prev-item').style.visibility = 'hidden';
     }
-
 }
 
 function renderNextItem() {
@@ -131,9 +129,17 @@ function renderPrevItem() {
 function submitContact() {
     var formSender = document.querySelector('#InputEmail').value;
     var formSubject = document.querySelector('#InputSubject').value;
-    var formBody = document.querySelector('#InputMassageBody').value;
+    var formBody = document.querySelector('#InputMessageBody').value;
     formBody += '%0a %0a sent from: ' + formSender + ' at: ' + Date.now();
     var gmailStr = ' https://mail.google.com/mail/?view=cm&fs=1&to=ofzir11@gmail.com&su=' + formSubject + '&body=' + formBody
     window.open(gmailStr, '_blank');
+}
+
+function changeModal(e) {
+    if (e.key === 'ArrowLeft') renderPrevItem();
+    else if (e.key === 'ArrowRight') renderNextItem();
+    else return
+   
+
 }
 
