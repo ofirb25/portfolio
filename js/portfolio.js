@@ -117,7 +117,7 @@ function getModalData(projId) {
     var elGitHIcon = document.querySelector('.modal-icons-github');
     
     if(proj.link) elPlayIcon.setAttribute('href',proj.link) ;
-    if(proj.github) elPlayIcon.setAttribute('href',proj.github); 
+    if(proj.github) elGitHIcon.setAttribute('href',proj.github); 
     elProjLabels.innerHTML = labelStrHTML;
     document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId', proj.id);
     //next/ previous button in modal
