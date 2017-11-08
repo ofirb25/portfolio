@@ -7,6 +7,8 @@ var projs = [
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/soko.png',
         imgLargePath: 'img/portfolio/soko.png',
+        link : 'https://ofirb25.github.io/sokoban/',
+        github : 'https://github.com/ofirb25/sokoban',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -17,6 +19,8 @@ var projs = [
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/mines.png',
         imgLargePath: 'img/portfolio/mines.png',
+        link : 'https://ofirb25.github.io/minesweeper/',
+        github : 'https://github.com/ofirb25/minesweeper',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -27,6 +31,8 @@ var projs = [
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/touchNums.png',
         imgLargePath: 'img/portfolio/touchNums.png',
+        link : 'https://ofirb25.github.io/touch-nums/',
+        github : 'https://github.com/ofirb25/touch-nums',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -37,6 +43,8 @@ var projs = [
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/inPicture.png',
         imgLargePath: 'img/portfolio/inPicture.png',
+        link : 'https://ofirb25.github.io/in-picture/',
+        github : 'https://github.com/ofirb25/in-picture',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -47,6 +55,8 @@ var projs = [
         publishedAt: Date.now(),
         imgThumbPath: 'img/portfolio/calc.png',
         imgLargePath: 'img/portfolio/calc.png',
+        link : 'https://ofirb25.github.io/calculator/',
+        github : 'https://github.com/ofirb25/calculator',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
@@ -102,6 +112,11 @@ function getModalData(projId) {
     for (var i = 0; i < projLabels.length; i++) {
         labelStrHTML += '<li><span class="badge badge-warning">' + projLabels[i] + '</span></li>'
     }
+    var elPlayIcon = document.querySelector('.modal-icons-play');
+    var elGitHIcon = document.querySelector('.modal-icons-github');
+    
+    if(projs[projId].link) elPlayIcon.setAttribute('href',projs[projId].link) ;
+    if(projs[projId].github) elPlayIcon.setAttribute('href',projs[projId].github); 
     elProjLabels.innerHTML = labelStrHTML;
     document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId', projs[projId].id);
     //next/ previous button in modal
