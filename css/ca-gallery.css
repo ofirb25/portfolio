@@ -479,7 +479,15 @@ body {
     .about-description {
       text-align: center;
       margin-top: 1rem;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem; 
+    } 
+    .portfolio-modal .close-modal {
+      top: 10px;
+      right: 10px;
+    }
+    .portfolio-modal .close-modal .lr {height:30px}
+    .portfolio-modal .close-modal .lr .rl {height:30px;}
+    }
   
   
   footer {

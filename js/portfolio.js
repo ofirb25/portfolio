@@ -101,13 +101,14 @@ function onInit() {
 }
 
 function getModalData(projId) {
-    if(!projs[projId]) return false;
-    document.querySelector('.modal-proj-name').innerText = projs[projId].name;
-    document.querySelector('.modal-proj-title').innerText = projs[projId].title;
-    document.querySelector('.modal-proj-description').innerText = projs[projId].desc;
-    document.querySelector('.modal-proj-img').setAttribute('src', projs[projId].imgLargePath);
+    var proj = projs[projId]
+    if(!proj) return false;
+    document.querySelector('.modal-proj-name').innerText = proj.name;
+    document.querySelector('.modal-proj-title').innerText = proj.title;
+    document.querySelector('.modal-proj-description').innerText = proj.desc;
+    document.querySelector('.modal-proj-img').setAttribute('src', proj.imgLargePath);
     var elProjLabels = document.querySelector('.modal-proj-labels');
-    var projLabels = projs[projId].labels;
+    var projLabels = proj.labels;
     var labelStrHTML = '';
     for (var i = 0; i < projLabels.length; i++) {
         labelStrHTML += '<li><span class="badge badge-warning">' + projLabels[i] + '</span></li>'
@@ -115,10 +116,10 @@ function getModalData(projId) {
     var elPlayIcon = document.querySelector('.modal-icons-play');
     var elGitHIcon = document.querySelector('.modal-icons-github');
     
-    if(projs[projId].link) elPlayIcon.setAttribute('href',projs[projId].link) ;
-    if(projs[projId].github) elPlayIcon.setAttribute('href',projs[projId].github); 
+    if(proj.link) elPlayIcon.setAttribute('href',proj.link) ;
+    if(proj.github) elPlayIcon.setAttribute('href',proj.github); 
     elProjLabels.innerHTML = labelStrHTML;
-    document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId', projs[projId].id);
+    document.querySelector('#itemIdPlaceholder').setAttribute('data-itemId', proj.id);
     //next/ previous button in modal
     if (projs[projId + 1]) {
         document.querySelector('.next-item').style.visibility = 'visible';
@@ -154,5 +155,6 @@ function changeModal(e) {
     if (e.key === 'ArrowLeft') renderPrevItem();
     else if (e.key === 'ArrowRight') renderNextItem();
     else return
+    
 }
 
