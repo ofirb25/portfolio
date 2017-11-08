@@ -61,12 +61,14 @@ var projs = [
     },
     {
         id: '5',
-        name: 'Mine Sweeper',
-        title: 'Memories from the past',
+        name: 'Book Shop',
+        title: 'Did you read my last post?',
         desc: 'Nulla facilisi. Duis malesuada lectus vitae urna commodo, vel iaculis turpis sodales. Nam porttitor ornare hendrerit. Aliquam facilisis augue dolor, a posuere dui mollis a. Fusce rutrum, libero vel efficitur accumsan, leo dui viverra est, a pellentesque quam elit et metus. Maecenas tincidunt accumsan lacinia. Nullam sed pretium nulla. Praesent quis faucibus metus. Donec augue arcu, varius pellentesque lectus vel, aliquet vulputate lorem. Mauris dictum scelerisque lacus sed ultrices.',
         publishedAt: Date.now(),
-        imgThumbPath: 'img/portfolio/mines.png',
-        imgLargePath: 'img/portfolio/mines.png',
+        imgThumbPath: 'img/portfolio/bookshop.png',
+        imgLargePath: 'img/portfolio/bookshop.png',
+        link : 'https://ofirb25.github.io/book-shop/',
+        github : 'https://github.com/ofirb25/book-shop',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     }
 ]
