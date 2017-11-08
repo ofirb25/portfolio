@@ -619,6 +619,7 @@ body {
   
      .portfolio-item img {
        height: 192px;
+       width:100%;
      }
      ul.list-inline.modal-proj-labels li {
       display: inline;
@@ -676,9 +677,6 @@ body {
   
   .modal-body{
       padding:0
-  }
-
-  .modal-container {
   }
 
   @keyframes bounce {
