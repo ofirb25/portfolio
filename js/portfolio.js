@@ -37,14 +37,14 @@ var projs = [
     },
     {
         id: '3',
-        name: 'What\'s in the picture',
-        title: 'push it to the end',
+        name: 'Bloggin App',
+        title: 'Tell us something new',
         desc: 'Nulla facilisi. Duis malesuada lectus vitae urna commodo, vel iaculis turpis sodales. Nam porttitor ornare hendrerit. Aliquam facilisis augue dolor, a posuere dui mollis a. Fusce rutrum, libero vel efficitur accumsan, leo dui viverra est, a pellentesque quam elit et metus. Maecenas tincidunt accumsan lacinia. Nullam sed pretium nulla. Praesent quis faucibus metus. Donec augue arcu, varius pellentesque lectus vel, aliquet vulputate lorem. Mauris dictum scelerisque lacus sed ultrices.',
         publishedAt: Date.now(),
-        imgThumbPath: 'img/portfolio/inPicture.png',
-        imgLargePath: 'img/portfolio/inPicture.png',
-        link : 'https://ofirb25.github.io/in-picture/',
-        github : 'https://github.com/ofirb25/in-picture',
+        imgThumbPath: 'img/portfolio/bloggin.png',
+        imgLargePath: 'img/portfolio/bloggin.png',
+        link : 'https://ofirb25.github.io/bloggin/',
+        github : 'https://github.com/ofirb25/bloggin',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
