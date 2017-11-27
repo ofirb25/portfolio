@@ -1,15 +1,15 @@
 var projs = [
     {
         id: '0',
-        name: 'Sokoban Game',
-        title: 'push it to the end',
+        name: 'Meme Generator',
+        title: 'Create something funny',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem vitae arcu egestas feugiat. Phasellus tincidunt sem convallis nisi ullamcorper maximus. Morbi dignissim mauris enim, porta lobortis elit aliquet et. Pellentesque tempus a ante at rhoncus. Mauris quis commodo nulla, ac congue lacus. Morbi accumsan nulla nunc, eget dignissim arcu mollis id. Quisque porta rutrum nulla, ut eleifend nunc consectetur eu. Phasellus dapibus elit et turpis rhoncus, nec imperdiet massa porta.',
         publishedAt: Date.now(),
-        imgThumbPath: 'img/portfolio/soko.png',
-        imgLargePath: 'img/portfolio/soko.png',
-        link : 'https://ofirb25.github.io/sokoban/',
-        github : 'https://github.com/ofirb25/sokoban',
-        labels: ['Matrixes', 'Keyboard Events', 'Game']
+        imgThumbPath: 'img/portfolio/memeGen.png',
+        imgLargePath: 'img/portfolio/memeGen.png',
+        link : 'https://charlesmarlow.github.io/sprint2/#',
+        github : 'https://github.com/CharlesMarlow/sprint2',
+        labels: ['Canvas', 'Responsive', 'Meme']
     },
     {
         id: '1',
@@ -25,14 +25,14 @@ var projs = [
     },
     {
         id: '2',
-        name: 'Touch Nums',
-        title: 'Can you beat my record?',
+        name: 'Sokoban Game',
+        title: 'push it to the end',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem vitae arcu egestas feugiat. Phasellus tincidunt sem convallis nisi ullamcorper maximus. Morbi dignissim mauris enim, porta lobortis elit aliquet et. Pellentesque tempus a ante at rhoncus. Mauris quis commodo nulla, ac congue lacus. Morbi accumsan nulla nunc, eget dignissim arcu mollis id. Quisque porta rutrum nulla, ut eleifend nunc consectetur eu. Phasellus dapibus elit et turpis rhoncus, nec imperdiet massa porta.',
         publishedAt: Date.now(),
-        imgThumbPath: 'img/portfolio/touchNums.png',
-        imgLargePath: 'img/portfolio/touchNums.png',
-        link : 'https://ofirb25.github.io/touch-nums/',
-        github : 'https://github.com/ofirb25/touch-nums',
+        imgThumbPath: 'img/portfolio/soko.png',
+        imgLargePath: 'img/portfolio/soko.png',
+        link : 'https://ofirb25.github.io/sokoban/',
+        github : 'https://github.com/ofirb25/sokoban',
         labels: ['Matrixes', 'Keyboard Events', 'Game']
     },
     {
