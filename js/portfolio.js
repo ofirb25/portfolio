@@ -84,7 +84,7 @@ function onInit() {
         $('body>section,footer').removeClass('hidden')
         $('.loader-background').fadeOut(500, function() { $(this).remove(); })
 
-    },1000)
+    },1400)
     var elPortContainer = document.querySelector('.portfolio-grid');
     var strHTML = ''
     for (var i = 0; i < projs.length; i++) {
